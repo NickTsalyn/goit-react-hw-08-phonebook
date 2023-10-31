@@ -4,9 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Formik, Field } from 'formik';
 import { nanoid } from 'nanoid';
 
-import { addContacts } from 'api/api';
-
 import { Button, FormStyled } from './ContactForm.styled';
+import { addContacts } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/selectors';
 
 // const FormValidSchema = Yup.object().shape({

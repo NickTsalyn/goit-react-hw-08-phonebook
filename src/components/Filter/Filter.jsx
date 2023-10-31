@@ -1,7 +1,6 @@
 import { FilterWrapper } from "./Filter.styled"
 import { useDispatch, useSelector } from 'react-redux';
-import { setContactFilter } from "redux/filterSlice";
-
+import { setContactFilter } from "redux/contacts/filterSlice";
 
 
 export const Filter = () => {
