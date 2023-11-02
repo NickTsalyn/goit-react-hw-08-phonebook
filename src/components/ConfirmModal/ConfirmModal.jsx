@@ -30,15 +30,22 @@ export const ConfirmModal = ({ id, name, isOpen, closeModal }) => {
       if (subtitleRef.current) {
         subtitleRef.current.style.color = '#f00';
       }
-    }, [isOpen]);
-
+    }, []);
+    const handleAfterClose = () => {
+        const modalRoot = document.getElementById('#root');
+        if (modalRoot) {
+          modalRoot.innerHTML = ''; // Remove the content of the modal root element
+        }
+      };
 
   return (
     <>
      <Modal
       isOpen={isOpen}
       shouldCloseOnOverlayClick={true}
+      onAfterClose={handleAfterClose}
       onRequestClose={closeModal}
+
       style={customStyles}
       contentLabel="Modal"
     >
