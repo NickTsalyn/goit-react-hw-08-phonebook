@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const ButtonStyled = styled.button`
   display: block;
   background-color: var(--accent);
+  height: 37px;
   color: var(--text);
   font-weight: 500;
   font-size: 15px;
