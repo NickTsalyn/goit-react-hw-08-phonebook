@@ -1,31 +1,41 @@
-import { useSelector, useDispatch } from 'react-redux';
-// import { useEffect } from 'react';
-import { selectContacts, selectFilter } from 'redux/selectors';
-import { deleteContacts } from 'redux/contacts/operations';
+import { useSelector } from 'react-redux';
+// import { deleteContacts } from 'redux/contacts/operations';
+import { selectContacts, selectFilter } from 'redux/contacts/selectors';
+import { ContactContainer, ContactItem } from './ContactListItem.styled';
+import { Button } from 'components/Button/Button';
+import { useState } from 'react';
+import { ConfirmModal } from 'components/ConfirmModal/ConfirmModal';
 
 export const ContactListItem = () => {
-  const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
-  console.log(contacts)
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-    // useEffect(() => {
-    // dispatch(fetchContacts())
-    // }, [dispatch])
-
   return (
     <>
       {filteredContacts.map(contact => (
-        <li key={contact.id}>
-          {contact.name}: {contact.phone}
-          <button onClick={() => dispatch(deleteContacts(contact.id))}>
+        <ContactContainer key={contact.id}>
+          <ContactItem>
+            {contact.name}: {contact.number}
+          </ContactItem>
+          <Button onClick={() => openModal()}>
             Delete
-          </button>
-        </li>
+          </Button>
+          {modalIsOpen && <ConfirmModal id={contact.id} name={contact.name} isOpen={modalIsOpen} closeModal={closeModal} />}
+        </ContactContainer>
       ))}
     </>
   );

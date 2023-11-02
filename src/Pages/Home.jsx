@@ -1,27 +1,26 @@
-const styles = {
-    container: {
-      minHeight: 'calc(100vh - 50px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    title: {
-      fontWeight: 500,
-      fontSize: 48,
-      textAlign: 'center',
-    },
-  };
-  
-  export default function Home() {
-    return (
-      <div style={styles.container}>
-        <h1 style={styles.title}>
-          Task manager welcome page{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
-        </h1>
-      </div>
-    );
-  }
-  
+import { HomeTitle, HomeWrapper, MainPoints, Point, TextWrapper } from "components/HomeInfo/HomeInfo.styled";
+
+
+export default function Home() {
+  return (
+    <HomeWrapper>
+      <HomeTitle>Stay Connected</HomeTitle>
+      <TextWrapper>
+        <MainPoints>
+          <Point>
+            <b>Effortless Organization</b> : Categorize your contacts easily, so
+            you can quickly find the right person when you need them.
+          </Point>
+          <Point>
+            <b>Smart Search</b>: Our powerful search feature ensures speedy
+            access to contact details, saving you time and effort.
+          </Point>
+          <Point>
+            <b>Seamless Access</b>: Enjoy access across all your devices,
+            ensuring your contacts are with you wherever you go.
+          </Point>
+        </MainPoints>
+      </TextWrapper>
+    </HomeWrapper>
+  );
+}

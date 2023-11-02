@@ -1,19 +1,25 @@
-import { ContactList } from './ContactList/ContactList';
-import { Filter } from './Filter/Filter';
-import { ContactForm } from './ContactForm/ContactForm';
-
+// import { ContactList } from './ContactList/ContactList';
+// import { Filter } from './Filter/Filter';
+// import { ContactForm } from './ContactForm/ContactForm';
+import { ContactForm } from '../components/ContactForm/ContactForm';
+import { Filter } from '../components/Filter/Filter';
+import { ContactList } from '../components/ContactList/ContactList';
+import { ContactTitle, HomeTitle } from 'components/HomeInfo/HomeInfo.styled';
 
 const Contacts = () => {
-    return (
-        <div>
-        <h1>Phonebook</h1>
+  return (
+    <>
+      <div>
+        <HomeTitle>Phonebook</HomeTitle>
         <ContactForm />
-        <h2>Contacts</h2>
+      </div>
+      <div>
+        <ContactTitle>Contacts</ContactTitle>
         <Filter />
         <ContactList />
-        </div>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-
-export default Contacts
+export default Contacts;

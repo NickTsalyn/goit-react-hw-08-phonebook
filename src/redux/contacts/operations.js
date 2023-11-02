@@ -39,4 +39,3 @@ export const deleteContacts = createAsyncThunk(
   }
 );
 
-// 'https://connections-api.herokuapp.com'
