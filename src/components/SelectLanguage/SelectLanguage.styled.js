@@ -8,10 +8,11 @@ export const SelectStyled = styled.select`
   color: var(--text);
   font-weight: 500;
   font-size: 15px;
+  text-align: center;
   padding: 10px;
   border: transparent;
   border-radius: 25px;
-  margin-right: 10px; /* Add margin for spacing */
+  margin-right: 10px;
 
   &:focus,
   &:hover {
