@@ -8,7 +8,7 @@ export const contactSlice = createSlice({
   initialState: {
     items: [],
     isLoading: false,
-    error: null,
+    error: null
   },
 
   extraReducers: {

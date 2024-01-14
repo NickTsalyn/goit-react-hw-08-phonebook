@@ -5,10 +5,11 @@ import { ContactTitle, HomeTitle } from 'components/HomeInfo/HomeInfo.styled';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/contacts/operations';
+import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
-
-    const dispatch = useDispatch();
+  const { t } = useTranslation('global');
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -16,11 +17,11 @@ const Contacts = () => {
   return (
     <>
       <div>
-        <HomeTitle>Phonebook</HomeTitle>
+        <HomeTitle>{t('contacts.title')}</HomeTitle>
         <ContactForm />
       </div>
       <div>
-        <ContactTitle>Contacts</ContactTitle>
+        <ContactTitle>{t('contacts.list.title')}</ContactTitle>
         <Filter />
         <ContactList />
       </div>

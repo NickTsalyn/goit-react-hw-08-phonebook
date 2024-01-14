@@ -12,6 +12,7 @@ import {
 } from './ContactForm.styled';
 import { addContacts } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
+import { useTranslation } from 'react-i18next';
 
 const FormValidSchema = Yup.object().shape({
   name: Yup.string()
@@ -33,6 +34,7 @@ const FormValidSchema = Yup.object().shape({
 });
 
 export const ContactForm = () => {
+  const {t} = useTranslation("global")
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
@@ -65,15 +67,15 @@ export const ContactForm = () => {
     >
       <FormWrapper>
         <Label htmlFor="name">
-          Name
+          {t('contacts.form.name')}
           <FieldForm type="text" name="name" />
         </Label>
         <Label htmlFor="number">
-          Number
+        {t('contacts.form.number')}
           <FieldForm type="tel" name="number" />
         </Label>
 
-        <ButtonStyled type="submit">Add contact</ButtonStyled>
+        <ButtonStyled type="submit">{t('contacts.form.add')}</ButtonStyled>
       </FormWrapper>
     </Formik>
   );

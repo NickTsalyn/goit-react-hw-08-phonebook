@@ -1,12 +1,8 @@
-import styled from '@emotion/styled';
+import styled from "styled-components";
+// import { GrLanguage } from "react-icons/gr";
 
-export const AuthNavWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`;
 
-export const ButtonStyled = styled.button`
+export const SelectStyled = styled.select`
   display: block;
   background-color: var(--accent);
   color: var(--text);
@@ -15,6 +11,7 @@ export const ButtonStyled = styled.button`
   padding: 10px;
   border: transparent;
   border-radius: 25px;
+  margin-right: 10px; /* Add margin for spacing */
 
   &:focus,
   &:hover {
@@ -23,5 +20,4 @@ export const ButtonStyled = styled.button`
     outline: none;
   }
 `;
-
 

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const UserMenuWrapper = styled.div`
   display: flex;
   align-items: center;
+  gap: 20px;
 `;
 
 export const Text = styled.p`
@@ -14,4 +15,4 @@ export const Text = styled.p`
   padding: 10px;
   border: transparent;
   border-radius: 25px;
-  `
+`;

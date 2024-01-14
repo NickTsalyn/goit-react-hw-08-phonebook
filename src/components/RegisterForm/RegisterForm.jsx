@@ -1,8 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { ButtonStyled, Form, FormInput, Label } from './RegisterForm.styled';
+import { useTranslation } from 'react-i18next';
 
 export const RegisterForm = () => {
+  const {t} = useTranslation('global')
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -21,18 +23,18 @@ export const RegisterForm = () => {
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
       <Label>
-        Username
+        {t('register.username')}
         <FormInput type="text" name="name" />
       </Label>
       <Label>
-        Email
+      {t('register.email')}
         <FormInput type="email" name="email" />
       </Label>
       <Label>
-        Password
+      {t('register.password')}
         <FormInput type="password" name="password" />
       </Label>
-      <ButtonStyled type="submit">Register</ButtonStyled>
+      <ButtonStyled type="submit">{t('home.register')}</ButtonStyled>
     </Form>
   );
 };

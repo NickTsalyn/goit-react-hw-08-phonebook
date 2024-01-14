@@ -1,0 +1,54 @@
+{
+  "home": {
+    "title": "Stay Connected",
+    "textOne": {
+      "title": "Effortless Organization",
+      "text": "Categorize your contacts easily, so you can quickly find the right person when you need them."
+    },
+    "textTwo": {
+      "title": "Smart Search",
+      "text": "Our powerful search feature ensures speedy access to contact details, saving you time and effort."
+    },
+    "textThree": {
+      "title": "Seamless Access",
+      "text": "Enjoy access across all your devices, ensuring your contacts are with you wherever you go."
+    },
+    "login": "Log In",
+    "register": "Register",
+    "main": "Home",
+    "contacts": "Contacts"
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "button": "Log In"
+  },
+  "register": {
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "button": "Register"
+  },
+  "contacts": {
+    "title": "Phonebook",
+    "form": {
+      "name": "Name",
+      "number": "Number",
+      "add": "Add contact"
+    },
+    "list": {
+      "title": "Contacts",
+      "filter": "Find contacts by name",
+      "delete": "Delete"
+    }
+  },
+  "logout": {
+    "text": "Welcome",
+    "button": "Logout"
+  },
+  "modalConfirm": {
+    "message": "Are you sure you want to delete the contact:",
+    "cancel": "Cancel",
+    "delete": "Delete"
+  }
+}

@@ -1,23 +1,29 @@
-import { HomeTitle, HomeWrapper, MainPoints, Point, TextWrapper } from "components/HomeInfo/HomeInfo.styled";
+import {
+  HomeTitle,
+  HomeWrapper,
+  MainPoints,
+  Point,
+  TextWrapper,
+} from 'components/HomeInfo/HomeInfo.styled';
+import { useTranslation } from 'react-i18next';
 
 
 export default function Home() {
+  const { t } = useTranslation('global');
+
   return (
     <HomeWrapper>
-      <HomeTitle>Stay Connected</HomeTitle>
+      <HomeTitle>{t('home.title')}</HomeTitle>
       <TextWrapper>
         <MainPoints>
           <Point>
-            <b>Effortless Organization</b> : Categorize your contacts easily, so
-            you can quickly find the right person when you need them.
+            <b>{t('home.textOne.title')}</b> : {t('home.textOne.text')}
           </Point>
           <Point>
-            <b>Smart Search</b>: Our powerful search feature ensures speedy
-            access to contact details, saving you time and effort.
+            <b>{t('home.textTwo.title')}</b> : {t('home.textTwo.text')}
           </Point>
           <Point>
-            <b>Seamless Access</b>: Enjoy access across all your devices,
-            ensuring your contacts are with you wherever you go.
+            <b>{t('home.textThree.title')}</b> : {t('home.textThree.text')}
           </Point>
         </MainPoints>
       </TextWrapper>
