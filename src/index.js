@@ -21,7 +21,7 @@ i18next
   .use(initReactI18next)
   .init({
     interpolation: { escapeValue: false },
-    fallbackLng: 'ua',
+    fallbackLng: 'en',
     resources: {
       en: {
         global: global_en,

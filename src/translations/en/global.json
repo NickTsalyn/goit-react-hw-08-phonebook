@@ -1,54 +1,56 @@
 {
-  "lang": "Українська",
+  "lang": "English",
   "home": {
-    "title": "Залишайтеся на зв'язку",
+    "title": "Stay Connected",
     "textOne": {
-      "title": "Безусильна організація",
-      "text": "Легко категоризуйте свої контакти, щоб ви могли швидко знайти потрібну особу, коли вам це потрібно."
+      "title": "Effortless Organization",
+      "text": "Categorize your contacts easily, so you can quickly find the right person when you need them."
     },
     "textTwo": {
-      "title": "Розумний пошук",
-      "text": "Наш потужний пошуковий інструмент гарантує швидкий доступ до контактних даних, заощаджуючи вам час та зусилля."
+      "title": "Smart Search",
+      "text": "Our powerful search feature ensures speedy access to contact details, saving you time and effort."
     },
     "textThree": {
-      "title": "Безшовний доступ",
-      "text": "Насолоджуйтеся доступом до всіх своїх пристроїв, що забезпечує присутність ваших контактів з вами будь-де ви йдете."
+      "title": "Seamless Access",
+      "text": "Enjoy access across all your devices, ensuring your contacts are with you wherever you go."
     },
-    "chooseLanguage": "Оберіть Мову",
-    "login": "Увійти",
-    "register": "Реєстрація",
-    "main": "Головна",
-    "contacts": "Контакти"
+    "chooseLanguage": "Select Language",
+    "login": "Log In",
+    "register": "Register",
+    "main": "Home",
+    "contacts": "Contacts"
   },
   "login": {
-    "email": "Електронна пошта",
-    "password": "Пароль"
+    "email": "Email",
+    "password": "Password",
+    "button": "Log In"
   },
   "register": {
-    "username": "Нікнейм",
-    "email": "Електронна пошта",
-    "password": "Пароль"
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "button": "Register"
   },
   "contacts": {
-    "title": "Контакти",
+    "title": "Phonebook",
     "form": {
-      "name": "Ім'я контакта",
-      "number": "Номер телефону",
-      "add": "Додати контакт"
+      "name": "Name",
+      "number": "Number",
+      "add": "Add contact"
     },
     "list": {
-      "title": "Контакти",
-      "filter": "Знайти контакт по імені",
-      "delete": "Видалити"
+      "title": "Contacts",
+      "filter": "Find contacts by name",
+      "delete": "Delete"
     }
   },
   "logout": {
-    "text": "Ласкаво просимо",
-    "button": "Вийти"
+    "text": "Welcome",
+    "button": "Logout"
   },
   "modalConfirm": {
-    "message": "Ви впевненні що хочете видалити контакт: ",
-    "cancel": "Відміна",
-    "delete": "Видалити"
+    "message": "Are you sure you want to delete the contact:",
+    "cancel": "Cancel",
+    "delete": "Delete"
   }
 }

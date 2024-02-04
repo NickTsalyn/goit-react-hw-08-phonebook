@@ -3,8 +3,8 @@ import Select from 'react-select';
 import { useTranslation } from 'react-i18next';
 
 const options = [
-  { value: 'en', label: 'Ukrainian' },
-  { value: 'ua', label: 'English' },
+  { value: 'ua', label: 'Ukrainian' },
+  { value: 'en', label: 'English' },
   { value: 'ar', label: 'Arabic' },
   { value: 'he', label: 'Hebrew' }
 ];
