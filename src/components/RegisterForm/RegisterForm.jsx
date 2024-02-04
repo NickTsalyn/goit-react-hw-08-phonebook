@@ -1,10 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import { ButtonStyled, Form, FormInput, Label } from './RegisterForm.styled';
+import {Form, FormInput, Label } from './RegisterForm.styled';
 import { useTranslation } from 'react-i18next';
 
+
+// const captchaKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+
+
 export const RegisterForm = () => {
-  const {t} = useTranslation('global')
+  const { t } = useTranslation('global');
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -20,6 +24,7 @@ export const RegisterForm = () => {
     form.reset();
   };
 
+
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
       <Label>
@@ -27,14 +32,13 @@ export const RegisterForm = () => {
         <FormInput type="text" name="name" />
       </Label>
       <Label>
-      {t('register.email')}
+        {t('register.email')}
         <FormInput type="email" name="email" />
       </Label>
       <Label>
-      {t('register.password')}
+        {t('register.password')}
         <FormInput type="password" name="password" />
       </Label>
-      <ButtonStyled type="submit">{t('home.register')}</ButtonStyled>
     </Form>
   );
 };

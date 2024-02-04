@@ -1,9 +1,10 @@
 import React from 'react';
-import { SelectStyled } from './SelectLanguage.styled';
+// import { SelectStyled } from './SelectLanguage.styled';
 import { useTranslation } from 'react-i18next';
+import CustomDropdown from 'components/Select';
 
 export const SelectLanguage = () => {
-  const { t, i18n } = useTranslation('global');
+  const { i18n } = useTranslation('global');
 
   const handleChange = lang => {
     i18n.changeLanguage(lang);
@@ -15,12 +16,6 @@ export const SelectLanguage = () => {
   };
 
   return (
-    <>
-      <SelectStyled onChange={handleChangeLanguage}>
-        <option value="">--{t('home.chooseLanguage')}--</option>
-        <option value="en">Ukrainian</option>
-        <option value="ua">English</option>
-      </SelectStyled>
-    </>
+      <CustomDropdown handleChangeLanguage={handleChangeLanguage} handleChange={handleChange}/>
   );
 };
